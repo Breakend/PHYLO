@@ -15,14 +15,29 @@ a:link, a:visited, a:active {
 	/* color:#333; */
 }
 
+#app-content {
+	top:70px;
+	position:relative;
+	padding-bottom:20px;
+}
+
+a {
+    -moz-transition: all 0.1s linear;
+    -webkit-transition: all 0.1s linear;
+    -o-transition: all 0.1s linear;
+    transition: all 0.1s linear;
+}
+
 html, body {
 	min-height:100%;
 }
+/* bootstrap overrides */
 
 [class^="icon-"],
 [class*=" icon-"] {
 	background-image: none !important;
 }
+/* end of override */
 
 body {
 	/*background-color:#F1F1F1;
@@ -30,6 +45,7 @@ body {
 	/*background: #f4f4f4 url(../img/background.png);
 	*/
 	background-color: #ebebeb;
+
 	font-family: 'helveticathin', Helvetica, Arial, sans-serif;
 	color:black;
 	/* background-color: #1C1C1C; */
@@ -43,8 +59,19 @@ body {
 	user-select: none;
 	min-width:1024px;
 }
+
+#appBackground {
+	/*background-size:100%;	*/
+	background: url('../img/phylo-bg-4.svg') top left repeat;
+	height:100%;
+	width:100%;
+	position:fixed;
+	opacity: 0.05;
+	top:0;
+	left:0;
+}
 /*disables tablet */
-	.tablet-property {
+/*	.tablet-property {
 		display:none;
 	}
 	
@@ -54,16 +81,16 @@ body {
 	#tabletPanel {
 		display:none;	
 	}
-    #tablet-grid-2 {
-              display:none;
-    }
-    .tablet-grid {
+	#tablet-grid-2 {
+		display:none;
+	}
+	.tablet-grid {
 		display:none;
 	}
 	#tabletSettingUp {
 		display:none;
 	}
-
+*/
 /* disables the game */
 #level_inputbox {
 	display:none;
@@ -86,13 +113,14 @@ body {
 }
 
 #draw {
+	border-radius:3px;
 	box-shadow: 0 1px 1px #ccc;
-    -webkit-box-shadow:0 1px 1px #ccc;
-    -khtml-box-shadow:0 1px 1px #ccc;
-    -o-box-shadow:0 1px 1px #ccc;
-    -ms-box-shadow:0 1px 1px #ccc;
-    -ms-box-shadow:0 1px 1px #ccc;
-	/*	background-color: #efefef;
+	-webkit-box-shadow:0 1px 1px #ccc;
+	-khtml-box-shadow:0 1px 1px #ccc;
+	-o-box-shadow:0 1px 1px #ccc;
+	-ms-box-shadow:0 1px 1px #ccc;
+	-ms-box-shadow:0 1px 1px #ccc;
+/*	background-color: #efefef;
 	*/
 	background-color:white;
 	/*background: linear-gradient(-28deg, black 0%, #3D3D3D 95%);
@@ -227,8 +255,13 @@ a.btn {
 .customize-tab-onselect, .customize-tab a:hover {
 	background-color: whitesmoke !important; 
 	color:black !important;
+	font-weight:bold;
 }
+.customize-tab a {
+	background-color: whitesmoke; 
 
+	color: DarkSlateGray;
+}
 .customize .customize-buttons {
 	color:white;
 	margin-top:10px;
@@ -237,7 +270,8 @@ a.btn {
 /* end of theme controller css */
 
 #game {
-    display:inline-block;
+	border-radius: 3px;
+	display:inline-block;
 	box-shadow: 0 6px 6px -6px #CCC;
 	-webkit-box-shadow: 0 6px 6px -6px #CCC;
 	-moz-box-shadow: 0 6px 6px -6px #CCC;
@@ -275,12 +309,8 @@ a.btn {
 	position:relative;
 	min-height:500px;
 }
-#mid-panel a {
-	color:#6D6D6D;
-}
-
 #top-panel {
-	z-index:1000;
+	z-index:99;
 	font-family: Helvetica, Arial, sans-serif;
 	text-align:center;
 	height:36px;
@@ -317,7 +347,7 @@ a.btn {
 #options-button i{
 	font-size:40px;
 	top:-8px;
-    left:-20px;
+	left:-20px;
 	position:relative;
 }
 #options {
@@ -392,7 +422,7 @@ a.btn {
 	font-size:17px;
 	position:relative;
 	margin-left:0px !important;
-	display:none;
+	/*display:none;*/
 }
 
 #nav ul {
@@ -418,29 +448,30 @@ a.btn {
 #nav div:hover, #nav div.onSelect {
 	color: #f1f2f3;
 }
-#nav #play div:hover, #nav #play div.onSelect, .tablet-play-btn div, .tablet-login-btn div {
+#nav #play div:hover, #nav #play div.onSelect, .tablet-play-btn div, .tablet-login-btn div, .tablet-history-btn div {
 	background-color: #71B2E2;
 }
 
-#nav #tutorial div:hover, #nav #tutorial div.onSelect, .tablet-tutorial-btn div, .tablet-settings-btn div {
+#nav #tutorial div:hover, #nav #tutorial div.onSelect, .tablet-tutorial-btn div {
 	background-color: darkOrchid;
 }
-#nav #about div:hover, #nav #about div.onSelect, .tablet-about-btn div, .tablet-feedback-btn div, .tablet-history-btn div {
+#nav #about div:hover, #nav #about div.onSelect, .tablet-about-btn div, .tablet-feedback-btn div {
 	background-color: green;
 }
-#nav #credits div:hover, #nav #credits div.onSelect, .tablet-credits-btn div {
+/*#nav #credits div:hover, #nav #credits div.onSelect, .tablet-credits-btn div {
+	background-color: orange;
+}*/
+#nav #ranking div:hover, #nav #ranking div.onSelect, .tablet-ranking-btn div {
+	/*background-color:#EF4136;*/
 	background-color: orange;
 }
-
-#nav #ranking div:hover, #nav #ranking div.onSelect, .tablet-ranking-btn div {
+#nav #history div:hover, #nav #history div.onSelect, .tablet-settings-btn div{
+	/*background-color: #71B2E2;*/
 	background-color:#EF4136;
 }
-
-#nav #history div:hover, #nav #history div.onSelect {
-	background-color: #71B2E2;
-}
 #nav #expert div:hover, #nav #expert div.onSelect, .tablet-expert-btn div {
-	background-color: darkOrchid;
+	background-color: #71B2E2;
+	/*background-color: darkOrchid;*/
 }
 
 #menu {
@@ -497,18 +528,21 @@ a.btn {
 
 .wrapper-inner::selection {
 	background: lightblue;
-}
+}	
 .wrapper-inner::-moz-selection {
 	background:lightblue;
 }
-
-.wrapper-inner {
-    -webkit-touch-callout: text;
-    -webkit-user-select: text;
-    -khtml-user-select: text;
-    -moz-user-select: text;
-    -ms-user-select: text;
-    user-select: text;
+#ranking-wrapper {
+	border-radius: 3px;
+}
+.wrapper-inner {	
+	border-radius: 3px;
+	-webkit-touch-callout: text;
+	-webkit-user-select: text;
+	-khtml-user-select: text;
+	-moz-user-select: text;
+	-ms-user-select: text;
+	user-select: text;
 	padding:50px 100px;
 	background-color:white;
 	text-align:left;
@@ -559,7 +593,7 @@ a.btn {
 	bottom: 0px;
 	width:100%;
 	clear:both;
-	padding-top:10px;
+	padding-top:5px;
 	padding-bottom:10px;
 }
 #footer-content {
@@ -671,14 +705,6 @@ td.social-link {
 	-ms-box-shadow: 0 6px 6px -6px #CCC;
 	-khtml-box-shadow: 0 6px 6px -6px #CCC;
 }
-.language-list a div{
-	display:block !important;
-	padding: 5px 10px;
-}
-.language-list a div:hover {
-	background-color: #08C;
-	color:whitesmoke;
-}
 
 #language-tag {
 	min-width: 57px;
@@ -689,6 +715,14 @@ td.social-link {
 	top:-5px;
 	left:-10px;
 	position:relative;
+}
+.language-list a div{
+	display:block !important;
+	padding: 5px 10px;
+}
+.language-list a div:hover {
+	background-color: #08C;
+	color:whitesmoke;
 }
 
 .dropDownTriangle {
@@ -815,6 +849,12 @@ td.social-link {
 	min-height:300px;
 }
 
+#ranking-wrapper #loading-panel img {
+	width:80px;
+	top:-30px;
+	position: relative;
+}
+
 #mid-panel {
 	display:none;
 	padding-bottom:10px;
@@ -883,7 +923,7 @@ td.social-link {
 
 #wrapper {
     position:relative;
-    background: url(../img/bg-light.png) no-repeat center 60px;
+    /*background: url("assets/img/bg-light.png") no-repeat center 60px;*/
     z-index:0;
     height:500px;
 }
@@ -891,15 +931,12 @@ td.social-link {
 /* FOOTER */
 
 footer {
-	color: #6D6D6D !important;
 	padding: 17px 0 5px 0;
-	background-color:white;
-	border-top: 1px solid #ddd;
 }
 
 footer a:link, footer a:visited, footer a:active  {
 	font-size:15px;
-    color: #aaa;
+    color: white;
 }
 
 footer a:hover {
@@ -919,4 +956,19 @@ h2.slide-caption {
 }
 
 
+/* one moment */
+.oneMoment {
+	color:rgb(109, 109, 109);
+	font-size:20px;
+	text-shadow: -1px 0px #444, -1px -1px #444;
+}
+
+.modal-footer .footerButton.zocial{
+	width:44%;
+	font-size: 0.95em;
+
+}
+.modal-footer .footerButton.zocial:hover{
+	color:whitesmoke;
+}
 
