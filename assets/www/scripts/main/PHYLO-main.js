@@ -37,7 +37,8 @@ require.config({
 		//remapping js -> scripts
 		js : 'scripts/',
 		tpl : "tpl",
-		nprogress : "bower_components/nprogress/nprogress"
+		nprogress : "bower_components/nprogress/nprogress",
+		phonegap: 'scripts/phonegap'
 	},
 
 	/*
@@ -91,10 +92,10 @@ require.config({
 				'DNA/endGame.theme','DNA/events.engine','DNA/engine.core','DNA/stage.core',
 				'DNA/sequence.core','DNA/splash.theme','DNA/tree.core','DNA/multiSelect.core',
 				'DNA/newick.core','DNA/lang.module','DNA/fitch.core','DNA/board.theme','DNA/highlighter.theme',
-				'DNA/protocal.core','DNA/score.theme']	
+				'DNA/protocal.core','DNA/score.theme', 'phonegap/cordova-2.5.0']	
 		},
 		'DNA/protocal.core' : {
-			deps : ['jquery']
+			deps : ['jquery', 'phonegap/cordova-2.5.0']
 		},
 		'RNA/stage.ext' : {
 			deps : ['jquery','DNA/stage.core']
@@ -132,6 +133,9 @@ require.config({
 		// 'validation/login.validation' : {
 		// 	deps : ['jquery', 'DNA/protocal.core', 'validation/cookie.validation']
 		// },
+		'phonegap/storage.phonegap':{
+                deps:['jquery','bootstrap','jquery.xml2json','DNA/protocal.core','phonegap/cordova-2.5.0']
+        },
 		'views/DT_bootstrap_ranking.actions' : {
 			deps : ['jquery','bootstrap','dataTables']
 		},
@@ -148,7 +152,7 @@ require.config({
 			deps : ['views/request.views','views/variable.listener']
 		},	
 		// 'views/navBar.views' : {
-		// 	deps : ['jquery','underscore', 'backbone','DNA/timer.core','views/lang.views']
+		// 	deps : ['jquery','underscore', 'backbone','DNA/timer.core','views/lang.views', 'phonegap/storage.phonegap']
 		// },
 		'dev/devTools' : {
 			deps : ['jquery']
