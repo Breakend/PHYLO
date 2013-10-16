@@ -69,11 +69,12 @@
 	
 	var script = document.createElement("script");
 	script.setAttribute("type", "text/javascript");
-	
+	console.log("in main.js");
 	if(config.env === "dev")
 	{
-		script.setAttribute("data-main", "assets/scripts/main/"+sitename+"-main.js");
-		script.setAttribute("src", "assets/bower_components/requirejs/require.js");
+		script.setAttribute("data-main", "scripts/main/"+sitename+"-main.js");
+		console.log("Got to the dev part");
+		script.setAttribute("src", "bower_components/requirejs/require.js");
 	}
 	
 	else if(config.env === "production")

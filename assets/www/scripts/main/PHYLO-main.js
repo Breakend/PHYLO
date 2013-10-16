@@ -1,6 +1,6 @@
 require.config({
 	waitSeconds : 15,
-	baseUrl : "assets/",
+	baseUrl : "",
 
 	paths : {
 		// Require Plugins
@@ -179,6 +179,7 @@ require([
 ){
 	//should configure nprogress here
 	NProgress.start();
+	// console.log("In the require part");
 	// var consoleUtils = new WebConsoleUtils({
 	// debug: config.DEBUG
 	// });

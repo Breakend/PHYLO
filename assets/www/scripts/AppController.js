@@ -39,7 +39,8 @@ define([
 		initialize : function()
 		{
 			this.isInit = this.isInit || false;
-			window.isTablet = navigator.userAgent.match(/(iPad|Android .* Chrome\/[.0-9]* (?!Mobile)|Opera Tablet|Android .* (?!Mobile)|Tablet|silk|kindle fire)/i) != null;
+			// window.isTablet = navigator.userAgent.match(/(iPad|Android .* Chrome\/[.0-9]* (?!Mobile)|Opera Tablet|Android .* (?!Mobile)|Tablet|silk|kindle fire)/i) != null;
+			window.isTablet = true;
 			//check if ipad and load ipad fix
 			var isiPad = navigator.userAgent.match(/(ipad)/i);
 			yepnope({
