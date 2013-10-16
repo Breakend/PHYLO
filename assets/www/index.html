@@ -7,6 +7,8 @@
 <!-- To learn more visit https://github.com/McGill-CSB/PHYLO or http://alfredkam.com -->
     <head>
         <meta charset="utf-8">
+    <META HTTP-EQUIV="CACHE-CONTROL" CONTENT="NO-CACHE">
+    <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 8 Oct 2013 11:12:01 GMT">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <title>PHYLO | DNA Puzzles</title>
         <meta name="description" content="">
@@ -16,23 +18,23 @@
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
         <!-- icon -->
-        <link rel="shortcut icon" type="image/ico" href="img/phylo_icon.ico" />
+        <link rel="shortcut icon" type="image/ico" href="assets/img/phylo_icon.ico" />
   
         <!-- css -->
         <!-- normalize -->
-        <link rel="stylesheet" type="text/css" href="bower_components/normalize-css/normalize.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/bower_components/normalize-css/normalize.css"/>
         
         <!-- bootstrap 3.0-->
-        <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/bower_components/bootstrap/dist/css/bootstrap.min.css"/>
 
         <!-- nprogress -->
-        <link rel="stylesheet" type="text/css" href="bower_components/nprogress/nprogress.css"/>
+        <link rel="stylesheet" type="text/css" href="assets/bower_components/nprogress/nprogress.css"/>
 
         <!-- fontello [Fontelico, entypo, font-awesome, typicons, zocials]-->
-        <link rel="stylesheet" href='css/icons/fontello/css/fontello.css'/>
-        <link rel="stylesheet" href='css/icons/fontello/css/animation.css'/>
-        <link rel="stylesheet" href='css/icons/fontello/css/fontello-ie7.css'/>
-        <link href='css/zocial.css' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" href='assets/css/icons/fontello/css/fontello.css'/>
+        <link rel="stylesheet" href='assets/css/icons/fontello/css/animation.css'/>
+        <link rel="stylesheet" href='assets/css/icons/fontello/css/fontello-ie7.css'/>
+        <link href='assets/css/zocial.css' rel='stylesheet' type='text/css' />
 
         <style>
             .zocial{
@@ -42,19 +44,19 @@
         </style>
 
         <!-- jquery-ui -->
-        <link rel='stylesheet' href='bower_components/jquery-ui/themes/base/minified/jquery-ui.min.css'/>
+        <link rel='stylesheet' href='assets/bower_components/jquery-ui/themes/base/minified/jquery-ui.min.css'/>
 
         <!-- custom css -->
-        <link rel='stylesheet' href='css/style.css'/>
-        <link rel='stylesheet' href='css/game.css'/>
-        <!-- <link rel='stylesheet' href='css/footer.css'/> -->
+        <link rel='stylesheet' href='assets/css/style.css'/>
+        <link rel='stylesheet' href='assets/css/game.css'/>
+        <!-- <link rel='stylesheet' href='assets/css/footer.css'/> -->
 
         <!-- DT ...? -->
-        <link rel='stylesheet' href='css/DT_bootstrap.css'/>
-        <link rel='stylesheet' href='css/DT_bootstrap_addons.css'/>
+        <link rel='stylesheet' href='assets/css/DT_bootstrap.css'/>
+        <link rel='stylesheet' href='assets/css/DT_bootstrap_addons.css'/>
 
         <!-- jquery notifyer -->
-        <link rel='stylesheet' href='css/ui.notify.css'/>
+        <link rel='stylesheet' href='assets/css/ui.notify.css'/>
         <!-- audio fix -->
         <script src="http://api.html5media.info/1.1.6/html5media.min.js"></script>
         <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -72,19 +74,19 @@
         <meta property="fb:app_id" content="254079141380941" />
         <meta property="fb:admins" content="580113485" />
 
-        <script src="bower_components/modernizr/modernizr.js"></script>
+        <script src="assets/bower_components/modernizr/modernizr.js"></script>
     </head>
     <body id="app">
         <div id='appBackground'></div>
-    	<!--[if lt IE 7]>
+        <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
         <div style='display:none'>
-            <img src='img/phylo.png'/>
+            <img src='assets/img/phylo.png'/>
         </div>
 
         <!-- notification container -->
-        <!--
+              
         <div id='notification' style='display:none'>
             <div id='notify-template'>
                 <a class='ui-notify-cross ui-notify-close' href='#'>x</a>
@@ -116,7 +118,6 @@
                 </div>
             </div>
         </div>
-        -->
         <!-- customize html -->
         <div class='wrapper-overlay' id='customizeRegion'>
 
@@ -129,10 +130,10 @@
         </header>
 <!--         wrapper -->
         <div id="wrapper">        
-<!--     app  	content -->
-        	<div id="app-content">
+<!--     app    content -->
+            <div id="app-content">
                 <div id='loading-panel'>
-                  <!--   <img src='img/loading.gif'/> -->
+                  <!--   <img src='assets/img/loading.gif'/> -->
                     <div class='oneMoment'>
                         Setting up! One moment please
                     </div>
@@ -143,27 +144,25 @@
                     </div> -->
                 </div>
             </div>
-<!--         	push -->
-        	<div id="push"></div>
+<!--            push -->
+            <div id="push"></div>
         </div>
 <!--         /wrapper -->
-		<!-- footer -->
+        <!-- footer -->
         <div class='container footer'>
                 <footer id='footer'></footer>
         </div>
-		<!-- /footer -->
+        <!-- /footer -->
         <!-- Overray notifications -->
         <div id="overlays"></div>
         
         <!-- js -->
-         <!-- // <script type="text/javascript" src="scripts/phonegap/cordova-2.2.0.js"></script> -->
-        <script type="text/javascript" src="scripts/util/options_template.js"></script>
-        <script type="text/javascript" src="scripts/main/main.js"></script>
-
+        <script type="text/javascript" src="assets/scripts/util/options_template.js"></script>
+        <script type="text/javascript" src="assets/scripts/main/main.js"></script>
         
 
         <!-- build -->
-        <!--  <script type="text/javascript" src="build/phylo.js"></script> -->
+        <!--  <script type="text/javascript" src="assets/build/phylo.js"></script> -->
 
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. And DOMAIN to your domain -->
         <script>
