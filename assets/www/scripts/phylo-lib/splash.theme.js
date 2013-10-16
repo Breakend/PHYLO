@@ -1,7 +1,7 @@
 (function() {
-	// var startSound = new Audio("assets/sounds/startSound.wav"); // buffers automatically when created
+	// var startSound = new Audio("sounds/startSound.wav"); // buffers automatically when created
 
-	// var countdownSound = new Audio("assets/sounds/countdownComplete.wav"); // buffers automatically when created
+	// var countdownSound = new Audio("sounds/countdownComplete.wav"); // buffers automatically when created
 	var startSound = document.getElementById("startSound");
 	var countdownSound = document.getElementById("countdownSound");
 	$.splash = {

@@ -15,3 +15,5 @@ Steps to build...
 1.) Run .../Phylo/cordova/build (with --debug or --release)
 	1.1) If that doesn't work, you probably need to either run the suggested android clean project
 	 1.1.1) If all else fails, try ant -f xyz/build.xml clean release -Dsdk.dir=/Applications/adt-bundle-mac/sdk/ in the home directory of Phylo  OR export ANDROID_HOME=<path/to/android/sdk>
+
+2.) Have to go through an change the base directory for the scripts, have to do this in ALL the templates and scripts or else it will cause problems (most likely remove the assets/ part)

@@ -44,12 +44,12 @@ define([
 			var isiPad = navigator.userAgent.match(/(ipad)/i);
 			yepnope({
 				test : isiPad,
-				yep : ['assets/css/ipad-fix.css']
+				yep : ['css/ipad-fix.css']
 			});
 			//test mode script injection
 			yepnope({
 				test : window.DEV.enableTabletMode,
-				yep : 'assets/css/tablet.css'
+				yep : 'css/tablet.css'
 			});
 			//check if mobile phone
 			var isMobile = navigator.userAgent.match(/(iPhone|Android .* Mobile)/i) != null;
@@ -58,7 +58,7 @@ define([
 			var isFF = navigator.userAgent.match(/Mozilla.* Firefox/) != null;
 			yepnope({
 				test : isFF,
-				yep : ['assets/css/FF-Win-fix.css']
+				yep : ['css/FF-Win-fix.css']
 			});
 
 			this.isTablet = window.isTablet;
@@ -112,7 +112,7 @@ define([
 				this.lang = lang;
 
 				$.ajax({
-					url :"assets/scripts/models/lang/"+lang+".js",
+					url :"scripts/models/lang/"+lang+".js",
 					async: false,
 					dataType: 'json',
 					// contentType	: 'application/x-www-form-urlencoded; charset=UTF-8'
@@ -130,7 +130,7 @@ define([
 					self.lang = "EN";
 					lang = "EN";
 					$.ajax({
-						url : "assets/scripts/models/lang/EN.js",
+						url : "scripts/models/lang/EN.js",
 						async: false,
 						dataType : 'json'
 					}).done(function(data, resp){
@@ -287,7 +287,7 @@ define([
 		tutorial : function(lang){
 			this.initHeaderFooter("Tutorial", lang);
 			$.ajax({
-				url :"assets/scripts/models/tutorial/"+this.lang+"-tutorial.js",
+				url :"scripts/models/tutorial/"+this.lang+"-tutorial.js",
 				async: false,
 				dataType: 'json'
 			}).done(function(data,resp){

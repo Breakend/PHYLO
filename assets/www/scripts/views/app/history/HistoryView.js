@@ -174,7 +174,7 @@ define([
            $('.table').dataTable( {
                "sDom": "<'row'<'col-md-6'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
                "oLanguage": {
-                   "sUrl": "assets/scripts/models/dataTable/datatable_" + this.lang+ ".txt"
+                   "sUrl": "scripts/models/dataTable/datatable_" + this.lang+ ".txt"
                },
                "aaSorting": [[ 5, "desc" ]],
                "fnDrawCallback": function ( oSettings ) {
@@ -246,7 +246,7 @@ define([
             }).fail(function(){
                 $.ajax({
                     method : "GET",
-                    url : "assets/scripts/dummy/history.dummy"
+                    url : "scripts/dummy/history.dummy"
                 }).done(function(data){
                     self.addHtml(data);
                 });

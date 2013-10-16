@@ -271,7 +271,7 @@
 		},
 		//gets the image
 		collect : function(name) {
-			return "assets/img/animal/"+name.toLowerCase()+".svg";
+			return "img/animal/"+name.toLowerCase()+".svg";
 		}
 	};
 })();

@@ -1,8 +1,8 @@
 /* this scripts generates the board features */
 (function() {
 	//insert sound here
-	//var lightUpSound = new Audio("assets/sounds/starLightUp.wav"); // buffers automatically when created
-	//var starClickSound = new Audio("assets/sounds/startSound.wav");
+	//var lightUpSound = new Audio("sounds/starLightUp.wav"); // buffers automatically when created
+	//var starClickSound = new Audio("sounds/startSound.wav");
 	var lighUpSound = document.getElementById("lighUpSound");
 	var starClickSound = document.getElementById("starClickSound");
 
@@ -10,7 +10,7 @@
 		win = window;
 	var musicList = [{
 		name: "Valent - The Buckle",
-		loc: "assets/sounds/Valent%20-%20The%20Buckle.mp3"
+		loc: "sounds/Valent%20-%20The%20Buckle.mp3"
 	}];
 	$.board = {
 		//generates the grid 
@@ -58,7 +58,7 @@
 			//disables background music
 			if (window.DEV.disableMusic == false) {
 
-				$("#musicPlayerSpot").html("<audio loop='loop' id='game-audio' preload='auto' autobuffer style='display:none'><source src='assets/sounds/Valent%20-%20The%20Buckle.ogg' type='audio/ogg'/><source src='assets/sounds/Valent%20-%20The%20Buckle.mp3' type='audio/mp3'/>Your browser does not support audio element</audio>");
+				$("#musicPlayerSpot").html("<audio loop='loop' id='game-audio' preload='auto' autobuffer style='display:none'><source src='sounds/Valent%20-%20The%20Buckle.ogg' type='audio/ogg'/><source src='sounds/Valent%20-%20The%20Buckle.mp3' type='audio/mp3'/>Your browser does not support audio element</audio>");
 			}
 
 			//disable this

@@ -212,6 +212,6 @@ module.exports = function(grunt) {
 
     var customize = fs.readFileSync('customize.html', 'utf-8')
     var files = getFiles('js') + getFiles('less') + getFiles('fonts')
-    fs.writeFileSync('assets/js/raw-files.js', files)
+    fs.writeFileSync('js/raw-files.js', files)
   });
 };

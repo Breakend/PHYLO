@@ -243,7 +243,7 @@ define([
             imageObj.onload = function(){
                 init(this);
             };
-            imageObj.src = "assets/img/color_picker.png";
+            imageObj.src = "img/color_picker.png";
         },
         setPlayerDefaultColor : function(){
             var self = this;

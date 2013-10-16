@@ -53,7 +53,7 @@
                 // });
 
                 $.ajax({
-                                    url :"assets/scripts/models/lang/"+lang+".js",
+                                    url :"scripts/models/lang/"+lang+".js",
                                     async: false,
                                     dataType: 'json'
                                 }).done(function(data,resp){

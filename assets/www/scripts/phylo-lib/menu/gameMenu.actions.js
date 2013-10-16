@@ -219,7 +219,7 @@
 			banner.onload = function() {
 				ctx.drawImage(banner,bannerValues.x,bannerValues.y,bannerValues.w,bannerValues.h);
 			};
-			banner.src = 'assets/img/logo.png';
+			banner.src = 'img/logo.png';
 			ctx.fillStyle = "#F1F1F1";
 			ctx.fillRect(212,250,600,120);
 
@@ -229,11 +229,11 @@
 			var menuStr = [window.lang.body.play.gameselect.levelselect.random["field 2"],window.lang.body.play.gameselect.levelselect["level id"]["field 2"],window.lang.body.play.gameselect.levelselect.disease["field 1"]];
 
 			var menuIcon = [
-					["assets/img/random.png",95,95],
-					["assets/img/id.png",95,95],
-					["assets/img/disease.png",95,95],
+					["img/random.png",95,95],
+					["img/id.png",95,95],
+					["img/disease.png",95,95],
 					];	
-			var menuIconHover = ["assets/img/random_hover.png","assets/img/id_hover.png","assets/img/disease_hover.png"]	
+			var menuIconHover = ["img/random_hover.png","img/id_hover.png","img/disease_hover.png"]	
 
 			//var menuBar = [
 			var cell = function(ctx,x,y,i) {
@@ -308,18 +308,18 @@
 							case 2:
 								var diseaseorder=[];
 								var diseaseImages = {
-									"Digestive": "assets/img/disease/digestive.png",
-									"Heart": "assets/img/disease/heart.png",
-									"Cancer": "assets/img/disease/cancer.png",
-									"Metabolic": "assets/img/disease/metabolic.png",
-									"Blood": "assets/img/disease/blood.png",
-									"Sensory": "assets/img/disease/sensory.png", 
-									"Brain": "assets/img/disease/brain.png", 
-									"Muscles": "assets/img/disease/muscles.png", 
-									"Lung": "assets/img/disease/lung.png",
-									"Infectious" : "assets/img/disease/infectious.png",
-									"Mental" : "assets/img/disease/mental.png",
-									"Misc" : "assets/img/disease/misc.png"
+									"Digestive": "img/disease/digestive.png",
+									"Heart": "img/disease/heart.png",
+									"Cancer": "img/disease/cancer.png",
+									"Metabolic": "img/disease/metabolic.png",
+									"Blood": "img/disease/blood.png",
+									"Sensory": "img/disease/sensory.png", 
+									"Brain": "img/disease/brain.png", 
+									"Muscles": "img/disease/muscles.png", 
+									"Lung": "img/disease/lung.png",
+									"Infectious" : "img/disease/infectious.png",
+									"Mental" : "img/disease/mental.png",
+									"Misc" : "img/disease/misc.png"
 
 								};
 								//TODO: a fail case
@@ -487,7 +487,7 @@
 			var emptyDisease = function(ctx, items, i) {
 				var img = new Image();
 				if (!items.image) {
-					items.image = "assets/img/disease/misc.png"
+					items.image = "img/disease/misc.png"
 				}
 				img.src = items.image;
 				img.onload = function() {
@@ -508,7 +508,7 @@
 				var img_hover = new Image();
 				//no image case
 				if(!items.image){
-					items.image=  "assets/img/disease/misc.png"
+					items.image=  "img/disease/misc.png"
 				}
 				img.src = items.image;
 				img_hover.src = items.image.replace('.png', '_hover.png');
@@ -690,7 +690,7 @@
 								selection[i].onOver(k[0],k[1]);		
 							}
 						});
-						banner.src = 'assets/img/logo.png';
+						banner.src = 'img/logo.png';
 						ctx.fillStyle = "#F1F1F1";
 						ctx.fillRect(212,250,600,120);
 						$("#level_inputbox").val("").hide();

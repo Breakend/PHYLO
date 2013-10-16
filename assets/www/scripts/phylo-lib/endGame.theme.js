@@ -287,9 +287,9 @@
                         $.main.clear();
                         $("#endGame").fadeOut();
                         $("#tree").html("");
-                        $("#gameBoard").html("<img src='assets/img/loading.gif'/>");
+                        $("#gameBoard").html("<img src='img/loading.gif'/>");
                         $.protocal.replay();
-                        $("#countDown-text").html("<img src='assets/img/loading.gif'/>");
+                        $("#countDown-text").html("<img src='img/loading.gif'/>");
                         $("#countDown").fadeIn();
                     });
 
