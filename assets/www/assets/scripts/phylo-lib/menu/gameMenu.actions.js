@@ -445,43 +445,27 @@
 							});
 							return;
 						}
-						$.ajax({
-							url: "../phpdb/phyloExpertDB.php",
-							data: "mode=2&id=" + id,
-							type: "POST",
-						}).done(function(data) {
-							if (data == "") {
-								//$.invalid.level();
-								// $.helper.popUp("Invalid level!", function(status) {
-
-								// }, {
-								// 	cancel: false,
-								// });
-								bootbox.alert(window.lang.body.misc.invalidPuzzle);
-
-							} else {
-								$("#draw").hide();
-								$("#menu").hide();
-								$("#level_inputbox").hide();
-								$("#level_inputbox").val("");
-								$.main.init({
-									type: "disease",
-									num: id,
-								});
-							}
-							return;
-						}).fail(function(data) {
-							$("#draw").hide();
-							$("#menu").hide();
-							$("#level_in/putbox").hide();
-							$("#level_inputbox").val("");
-							$.main.init({
-								type: "disease",
-								num: id,
-							});
-
-						});
-					}
+ 					$.storage.checkLevel(id,function(){
+                            //success
+                            $("#draw").hide();
+                            $("#menu").hide();
+                            $("#level_inputbox").hide();
+                            $("#level_inputbox").val("");
+                                $.main.init({
+                                type: "level",
+                                num: id,
+                            });
+                            return;
+                        },function(){
+                            //invalid  TODO, add in translation
+							bootbox.alert(window.lang.body.misc.invalidPuzzle);
+                            return;
+                        },
+                        function(){
+                           //failure TODO add in translation
+                            bootbox.alert("Cannot retrieve level due to Internet disconnection");
+                        });
+					}	
 				};
 				this.onOver = function(eX, eY) {
 					ctx.beginPath();

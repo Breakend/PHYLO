@@ -3794,6 +3794,7 @@
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/lang \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/lang.models.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/profile.js \
+/Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/puzzles \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/site.models.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/tutorial \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/dataTable/datatable_AR.txt \
@@ -3826,6 +3827,10 @@
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/lang/SP.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/lang/ZH-CN.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/lang/ZH-HK.js \
+/Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/puzzles/command.json \
+/Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/puzzles/Phylo_DB_levels_30032013.seq \
+/Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/puzzles/puzzle1.json \
+/Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/puzzles/puzzle_test.json \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/tutorial/DE-tutorial.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/tutorial/EN-tutorial.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/tutorial/FR-tutorial.js \
@@ -3838,6 +3843,7 @@
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/tutorial/ZH-CN-tutorial.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/models/tutorial/ZH-HK-tutorial.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/phonegap/cordova-2.5.0.js \
+/Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/phonegap/jquery.xml2json.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/phonegap/Readme.md \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/phonegap/storage.phonegap.js \
 /Users/Breakend/Documents/PHYLO/assets/www/assets/scripts/phylo-lib/board.theme.js \

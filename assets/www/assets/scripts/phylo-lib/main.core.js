@@ -38,7 +38,9 @@
                 $.lang.init(function() {
 					$("#game").show();
 					$.protocal.read(setting);
-					$.protocal.request();
+					consol.log("About to read the querryPuzzle")
+					$.storage.queryPuzzle();
+					//$.protocal.request();
 					//$.endGame.init("lose");
 				});
                 

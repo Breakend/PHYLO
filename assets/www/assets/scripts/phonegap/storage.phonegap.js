@@ -15,16 +15,17 @@
     dbname: "phyloPuzzle_storage",
     dbDisplay: "phyloDB",
     version: "1.0",
-    path: "../www/js/models/puzzles/",
+    path: "../models/puzzles/",
     commandF: "command.json",
     request: "",
     uploadCount:0,
 
     init: function(version) {
-      //console.log("LOG_storage: initializing ...");
+      console.log("LOG_storage: initializing ...");
       var self = $.storage;
       $.getJSON(self.path + self.commandF)
         .done(function(data) {
+        console.log("Found data: ", data);
         self.commands = data;
       })
         .fail(function() {

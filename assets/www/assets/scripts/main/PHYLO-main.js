@@ -82,6 +82,12 @@ require.config({
 		'views/customizeGame.actions' : {
 			deps : ['jquery']
 		},
+		'phonegap/jquery.xml2json':{
+                deps : ['jquery'],
+         },
+		'phonegap/storage.phonegap':{
+                deps:['jquery','bootstrap','phonegap/jquery.xml2json','DNA/protocal.core','phonegap/cordova-2.5.0']
+        },
 		'scripts/phylo-lib/menu/gameMenu.actions' : {
 			deps : ['jquery','models/disease.data','DNA/main.core']
 		},		
@@ -93,7 +99,7 @@ require.config({
 				'DNA/endGame.theme','DNA/events.engine','DNA/engine.core','DNA/stage.core',
 				'DNA/sequence.core','DNA/splash.theme','DNA/tree.core','DNA/multiSelect.core',
 				'DNA/newick.core','DNA/lang.module','DNA/fitch.core','DNA/board.theme','DNA/highlighter.theme',
-				'DNA/protocal.core','DNA/score.theme', 'phonegap/cordova-2.5.0']	
+				'DNA/protocal.core','DNA/score.theme', 'phonegap/cordova-2.5.0', 'phonegap/storage.phonegap']	
 		},
 		'DNA/protocal.core' : {
 			deps : ['jquery', 'phonegap/cordova-2.5.0']
@@ -135,7 +141,7 @@ require.config({
 			deps : ['jquery']
 		},
 		"views/HeaderView" : {	//previously navBar.view
-			deps : ['validation/cookie.validation.amd']
+			deps : ['phonegap/storage.phonegap', 'validation/cookie.validation.amd']
 		},
 		'views/site.views' : {
 			deps : ['views/request.views','views/variable.listener']
@@ -143,9 +149,6 @@ require.config({
 		'dev/devTools' : {
 			deps : ['jquery']
 		},
-		'phonegap/storage.phonegap':{
-                deps:['jquery','bootstrap','jquery.xml2json','DNA/protocal.core','phonegap/cordova-2.5.0']
-        },
 		'jquery.notify' : {
 			deps : ['jquery', 'jquery-ui']
 		},

@@ -73,7 +73,11 @@
         <meta property="og:site_name" content="Phylo | DNA Puzzles" />
         <meta property="fb:app_id" content="254079141380941" />
         <meta property="fb:admins" content="580113485" />
-
+    <script type="text/javascript">
+        window.onerror = function(message, url, lineNumber) {
+            console.log("Error: "+message+" in "+url+" at line "+lineNumber);
+        }
+    </script>
         <script src="assets/bower_components/modernizr/modernizr.js"></script>
     </head>
     <body id="app">

@@ -49,7 +49,8 @@
             "field 21": "Replay Game",
             "field 22": "Share with your friends",
             "field 23": "DNA Puzzles",
-            "field 24": "Learn More"
+            "field 24": "Learn More",
+            "field 25": "Couldn't find internet connection! Please connect to send solutions to database."
         },
         "play": {
             "gameselect": {

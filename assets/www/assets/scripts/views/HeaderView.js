@@ -6,6 +6,7 @@ define([
     "marionette",
     //TEMPLATES
     "text!tpl/app/Header.mustache",
+    "scripts/phonegap/storage.phonegap",
     "scripts/views/validation/cookie.validation.amd",
     //tablet tpl
     "text!tpl/tablet/TabletHeader.mustache",
@@ -15,6 +16,7 @@ define([
 ], function($, Marionette, tpl, cookie, tabletTpl) {
     var HeaderView = Marionette.ItemView.extend({
         initialize: function(options) {
+            console.log("In header.init")
             this.lang = options.lang;
             this.user = options.user;
             this.model.set({
@@ -24,6 +26,7 @@ define([
             if(this.options.format == "tablet") {
                 this.template = tabletTpl;
             }
+            console.log("End of init.");
         },
         template: tpl,
         ui: {
@@ -144,6 +147,8 @@ define([
         },
         onShow: function() {
             var self = this;
+            console.log("In on show...");
+            $.storage.init("1.0");
             $("html").click(function(){
                $("#login-box").hide();
                 $("#login-box").parent().removeClass("login-onSelect");
@@ -163,7 +168,23 @@ define([
                     window.username = username;
 
                 } else {
-
+                      window.connectStatus = $.protocal.checkConnection();
+                      if (window.connectStatus === false) {
+                        console.log("cannot detect connection");
+                        //show warning
+                        bootbox.dialog(window.lang.body.misc["field 25"], [{
+                          "label": "Retry",
+                          "class": "btn-primary",
+                          "callback": function() {
+                            $("#tablet-login-tag").trigger('click');
+                          }
+                        }, {
+                          "label": "Cancel",
+                          "class": "btn-danger"
+                        }]);
+                        failLoginCleanUp();
+                        return;
+                      }
                     $.get("http://phylo.cs.mcgill.ca/phpdb/hybridauth/signin/login.php?provider=" + provider + "&restart=0", function(data) {
                         var userinfo = eval("(" + data + ")");
                         if (userinfo.identifier) {
